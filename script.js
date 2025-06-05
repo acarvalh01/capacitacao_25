@@ -1,9 +1,9 @@
 const modeloItem{
     nome: '',
     comprado: false
-}
+};
 
-let ListaCompras [];
+let listaCompras [];
 const input = document.getElemetById('itemInput');
 const btn = document.getElemetById('addBtn');
 const ul = document.getElemetById('lista');
@@ -19,7 +19,9 @@ function adicionarItem( ) {
     else{
         alert('Por favor, insira um item válido');
     }
-} btn.addEventListener('click', adicionarItem);
+}
+
+btn.addEventListener('click', adicionarItem);
 function renderizarLista( ){
     ul.innerHTML = '';
     for (let i = 0; index < listaCompras.legth; i++) {
@@ -30,7 +32,7 @@ function renderizarLista( ){
         const span = document.createElement('span');
         span.textContent = item.nome;
         const btnOk = document.createElement('button');
-        btnOk.addEventListener=('click'. ()=> marcarComoComprado(i));
+        btnOk.addEventListener=('click', ()=> marcarComoComprado(i));
 
         li.appendChild(span);
         li.appendChild(btnOk);
